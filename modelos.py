@@ -72,3 +72,42 @@ st.write("Accuracy SVM:", accuracy_score(y_test, y_pred_svm))
 st.write("Confusion Matrix SVM:\n", confusion_matrix(y_test, y_pred_svm))
 st.write("Classification Report SVM:\n", classification_report(y_test, y_pred_svm))
 
+
+import pandas as pd
+import numpy as np
+import subprocess
+
+# Instalar scikit-learn
+subprocess.run(["pip", "install", "scikit-learn"])
+
+df = pd.read_csv('/kaggle/input/fraude/PS_20174392719_1491204439457_log.csv')
+
+# Otras operaciones en el DataFrame df...
+
+# Definir las características y la variable objetivo
+X = df.drop(['isFraud', 'nameOrig', 'nameDest', 'isFlaggedFraud'], axis=1)
+y = df['isFraud']
+
+# Dividir los datos utilizando pandas split_data
+X_train, X_test = pd.split_data(X, test_size=0.2, random_state=42)
+y_train, y_test = pd.split_data(y, test_size=0.2, random_state=42)
+
+# Crear el modelo DecisionTreeClassifier
+clf = DecisionTreeClassifier(random_state=42)
+
+# Entrenar el modelo
+clf.fit(X_train, y_train)
+
+# Predecir en el conjunto de prueba
+y_pred = clf.predict(X_test)
+
+# Mostrar el reporte de clasificación
+print(classification_report(y_test, y_pred))
+
+# Mostrar la matriz de confusión
+print(confusion_matrix(y_test, y_pred))
+
+# Otros modelos y evaluaciones...
+
+
+
