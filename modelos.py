@@ -15,6 +15,10 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.svm import SVC
+!pip list
+!pip install scikit-learn
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+
 
 df = pd.read_csv('/kaggle/input/fraude/PS_20174392719_1491204439457_log.csv')
 
