@@ -14,8 +14,7 @@ import numpy as np # linear algebra
 import os # accessing directory structure
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 
-    # Mostrar primeras filas del DataFrame
-    st.write(df.head())
+    
 
     # Verificar si la columna 'type' existe y no tiene valores nulos
     if 'type' in df.columns and not df['type'].isnull().any():
