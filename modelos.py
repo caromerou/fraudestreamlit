@@ -2,8 +2,28 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 
+
+!pip install kaggle
+
+from google.colab import files
+files.upload()  # Sube el archivo JSON de la API de Kaggle
+
+# Mover el archivo JSON a la ubicación correcta
+!mkdir -p ~/.kaggle
+!mv kaggle.json ~/.kaggle/
+
+# Cambiar los permisos del archivo
+!chmod 600 ~/.kaggle/kaggle.json
+
+# Descargar el conjunto de datos de Kaggle
+!kaggle datasets download -d ealaxi/paysim1
+
+# Descomprimir el archivo descargado
+!unzip paysim1.zip
+
+
 # Leer el archivo CSV
-df = pd.read_csv('kaggle datasets download -d ealaxi/paysim1')
+#df = pd.read_csv('kaggle datasets download -d ealaxi/paysim1')
 
 # Codificar variables categóricas usando pandas
 df['type_encoded'] = df['type'].map({'CASH_IN': 0, 'CASH_OUT': 1, 'DEBIT': 2, 'PAYMENT': 3, 'TRANSFER': 4})
