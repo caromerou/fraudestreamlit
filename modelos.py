@@ -14,7 +14,7 @@ import streamlit as st
 
 
 # Leer el archivo CSV
-df = pd.read_csv('df = pd.read_csv('/kaggle/input/paysim1/PS_20174392719_1491204439457_log.csv')')
+df = pd.read_csv('/kaggle/input/paysim1/PS_20174392719_1491204439457_log.csv')
 
 # Codificar variables categóricas usando pandas
 df['type_encoded'] = df['type'].map({'CASH_IN': 0, 'CASH_OUT': 1, 'DEBIT': 2, 'PAYMENT': 3, 'TRANSFER': 4})
