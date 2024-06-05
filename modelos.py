@@ -11,11 +11,7 @@ files.upload()  # Sube el archivo JSON de la API de Kaggle
 
 
 
-# Descargar el conjunto de datos de Kaggle
-!kaggle datasets download -d ealaxi/paysim1
 
-# Descomprimir el archivo descargado
-!unzip paysim1.zip
 
 
 # Leer el archivo CSV
