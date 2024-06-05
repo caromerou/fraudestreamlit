@@ -7,9 +7,7 @@ import streamlit as st
 from google.colab import files
 files.upload()  # Sube el archivo JSON de la API de Kaggle
 
-# Mover el archivo JSON a la ubicación correcta
-!mkdir -p ~/.kaggle
-!mv kaggle.json ~/.kaggle/
+
 
 # Cambiar los permisos del archivo
 !chmod 600 ~/.kaggle/kaggle.json
