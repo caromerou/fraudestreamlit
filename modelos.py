@@ -18,6 +18,7 @@ from sklearn.svm import SVC
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
 
+
 df = pd.read_csv('/kaggle/input/fraude/PS_20174392719_1491204439457_log.csv')
 
 df.head(10)
