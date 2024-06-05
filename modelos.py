@@ -9,8 +9,7 @@ files.upload()  # Sube el archivo JSON de la API de Kaggle
 
 
 
-# Cambiar los permisos del archivo
-!chmod 600 ~/.kaggle/kaggle.json
+
 
 # Descargar el conjunto de datos de Kaggle
 !kaggle datasets download -d ealaxi/paysim1
