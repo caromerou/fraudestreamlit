@@ -1,6 +1,4 @@
-!pip install streamlit -q
-!pip install streamlit-lottie
-!pip install Pillow
+
 
 
 %%writefile app.py
