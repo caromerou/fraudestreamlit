@@ -1,5 +1,5 @@
 import pandas as pd
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+#from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.svm import SVC
 from sklearn.preprocessing import LabelEncoder, StandardScaler
