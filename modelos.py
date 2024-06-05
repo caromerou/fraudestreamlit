@@ -3,7 +3,6 @@ import numpy as np
 import streamlit as st
 
 
-!pip install kaggle
 
 from google.colab import files
 files.upload()  # Sube el archivo JSON de la API de Kaggle
