@@ -9,7 +9,7 @@ Original file is located at
 
 import pandas as pd
 
-from sklearn.preprocessing import LabelEncoder, StandardScaler
+
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
