@@ -7,30 +7,13 @@ import streamlit as st
 
 
 
-from google.colab import files
-import pandas as pd
-
-# Subir el archivo
-uploaded = files.upload()
-
-# Listar los archivos subidos
-for filename in uploaded.keys():
-    print(f'Archivo subido: {filename}')
-
-# Leer el archivo con pandas
-# Supongamos que subiste un archivo Excel llamado 'mi_archivo.xlsx'
-df = pd.read_excel(filename)  # Usa pd.read_csv si es un archivo CSV
-
-# Mostrar las primeras filas del DataFrame
-print(df.head())
-
 
 
 
 
 
 # Leer el archivo CSV
-#df = pd.read_csv('PS_20174392719_1491204439457_log.csv')
+#df = pd.read_csv('https://www.kaggle.com/datasets/ealaxi/paysim1')
 
 # Codificar variables categóricas usando pandas
 df['type_encoded'] = df['type'].map({'CASH_IN': 0, 'CASH_OUT': 1, 'DEBIT': 2, 'PAYMENT': 3, 'TRANSFER': 4})
