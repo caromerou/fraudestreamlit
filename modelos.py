@@ -4,8 +4,7 @@ import streamlit as st
 
 
 
-from google.colab import files
-files.upload()  # Sube el archivo JSON de la API de Kaggle
+
 
 
 
